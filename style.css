@@ -9,3 +9,87 @@ h1 {
   color: #2463c7;
   text-align: center;
 }
+
+/* ===== Barra superior ===== */
+.app-top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* ===== Cabecera ===== */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 56px;
+  padding: 0 24px;
+  background-color: #2463c7;
+  color: #ffffff;
+}
+
+.brand,
+.quick-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand:hover {
+  text-decoration: underline;
+}
+
+.brand span,
+.quick-stats strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  color: #2463c7;
+  border-radius: 8px;
+}
+
+.quick-stats strong {
+  background-color: #16386f;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.85rem;
+}
+
+/* ===== Navegación ===== */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 24px;
+  background-color: #f0f4fb;
+  border-bottom: 1px solid #cdd9ee;
+}
+
+.main-nav a {
+  padding: 12px 16px;
+  border-bottom: 3px solid transparent;
+  color: #33415c;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  background-color: #e2eaf8;
+  color: #2463c7;
+}
+
+.main-nav a.active {
+  border-bottom-color: #2463c7;
+  color: #2463c7;
+  font-weight: bold;
+}
