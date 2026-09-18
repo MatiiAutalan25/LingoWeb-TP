@@ -5,11 +5,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  color: #2463c7;
-  text-align: center;
-}
-
 /* ===== Barra superior ===== */
 .app-top {
   position: sticky;
