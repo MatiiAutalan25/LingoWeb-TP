@@ -23,9 +23,9 @@ h1 {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
-  min-height: 56px;
-  padding: 0 24px;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+  padding: 0 1.5rem;
   background-color: #2463c7;
   color: #ffffff;
 }
@@ -34,7 +34,7 @@ h1 {
 .quick-stats {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .brand {
@@ -53,11 +53,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #ffffff;
   color: #2463c7;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .quick-stats strong {
@@ -71,13 +71,13 @@ h1 {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 24px;
+  padding: 0 1.5rem;
   background-color: #f0f4fb;
   border-bottom: 1px solid #cdd9ee;
 }
 
 .main-nav a {
-  padding: 12px 16px;
+  padding: 0.75em 1em;
   border-bottom: 3px solid transparent;
   color: #33415c;
   text-decoration: none;
