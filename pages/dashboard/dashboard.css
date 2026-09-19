@@ -3,3 +3,120 @@ h1 {
   font-family: Arial, sans-serif;
   text-align: center;
 }
+
+*	{ 
+  margin:	0;
+  padding:	0;
+  box-sizing:	border-box; 
+} 
+
+html,	body	{ 
+  width:	100vw;
+  height:	100vh; 
+  overflow:	hidden; 
+  font-family:	Arial,	sans-serif; 
+} 
+  
+.figura	{ 
+  display:grid;
+  width:	100vw;
+  height:	100vh; 
+  
+  /*	4	columnas	iguales,	6	filas:	header(1)	+	texto2(1)	+	cuerpo(4)	*/ 
+       
+  grid-template-columns:	repeat(4,	1fr);
+  grid-template-rows:	1.4fr	1.4fr	repeat(4,	1fr); 
+  grid-template-areas: 
+     "t2		t2		t2		t2" 
+      "a31	a41	a51	a61" 
+      "a32	a42	a52	a61" 
+      "a33	a43	a53	a61"
+      "a34	a44	a54	a61"; 
+      
+  gap:	0.3rem; 
+  padding:	0.3rem; } 
+  
+  @media (max-width: 40em) {
+  .figura {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "t2  t2  t2  t2"
+      "a31 a41 a51 a61"
+      "a32 a42 a52 a62"
+      "a33 a43 a53 a63"
+      "a34 a44 a54 a64";
+  }
+}
+
+  .caja	{ 
+    display:	flex;
+    align-items:	center; 
+    justify-content:	center; 
+    border:	0.1rem	solid	#333; 
+    text-align:	center; font-size:	1rem;
+  } 
+             
+  .nivel-1	{ 
+    font-size:	1.3rem; 
+    font-weight:	bold; 
+    background-color:	#dcdcdc;
+  } 
+  
+  .nivel-2	{ 
+    font-size:	1.6rem;
+    font-weight:	bold;
+    background-color:	#cfe8ff;
+  } 
+  
+  .nivel-3	{ 
+    background-color:	#ffffff;
+  }
+
+
+.tarjeta-idioma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white; /* Asegura que el fondo sea blanco */
+}
+
+
+.tarjeta-idioma .imagen-curso {
+    max-height: 40px; 
+    margin-bottom: 8px; 
+}
+
+
+.tarjeta-idioma p {
+    margin: 0;
+}
+
+/* Contenedor principal (la caja gris) */
+.contenedor-estadisticas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;      
+    height: 100%;            
+    box-sizing: border-box;
+}
+
+/* El título "ESTADISTICAS:" */
+.titulo-estadisticas {
+    margin: 0 0 10px 0;      
+    font-weight: bold;
+}
+
+/* La lista con los datos */
+.lista-estadisticas {
+    margin: 0;
+    padding: 0;
+    list-style: none;        
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    gap: 10px;                
+}
