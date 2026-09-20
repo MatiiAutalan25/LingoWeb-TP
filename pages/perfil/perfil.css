@@ -1,5 +1,333 @@
-h1 {
+.profile-title {
   color: #2463c7;
   font-family: Arial, sans-serif;
+}
+
+/* ===== Encabezado de la página ===== */
+.page-heading {
+  padding: 2rem 1.5rem 0;
+}
+
+.page-heading p {
+  margin-top: 0.5rem;
+  color: #52627d;
+}
+
+/* ===== Tarjeta de información personal ===== */
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background-color: #f4f6fa;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
   text-align: center;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #16386f;
+  border: 0.3rem solid #e3e8f2;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.personal-info h2 {
+  color: #0f2547;
+  font-size: 1.6rem;
+}
+
+.personal-info p {
+  color: #52627d;
+  font-size: 1.05rem;
+}
+
+.personal-info > span {
+  color: #5a6676;
+  font-size: 0.85rem;
+}
+
+.stats {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1.25rem;
+  list-style: none;
+}
+
+.stats li {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.25rem;
+  padding: 1rem 0.5rem;
+  background-color: #e3e8f2;
+  border-radius: 0.75rem;
+}
+
+.stats strong {
+  color: #0f2547;
+  font-size: 1.35rem;
+}
+
+.stats span {
+  color: #5a6676;
+  font-size: 0.8rem;
+}
+
+/* ===== Logros ===== */
+.achievements {
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f6fa;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
+}
+
+.achievements h2 {
+  margin-bottom: 1.5rem;
+  color: #0f2547;
+  font-size: 1.6rem;
+}
+
+.achievements h3 {
+  margin-bottom: 0.5rem;
+  color: #0f2547;
+  font-size: 1.05rem;
+}
+
+.achievements p {
+  margin-bottom: 0.75rem;
+  color: #5a6676;
+  font-size: 0.85rem;
+}
+
+.badge-list + h3 {
+  margin-top: 1.5rem;
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.badge-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 0.5rem;
+  min-width: 3.5rem;
+  color: #5a6676;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #2463c7;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+.locked .badge {
+  background-color: #c8d2e4;
+  filter: grayscale(1);
+}
+
+/* ===== Ajustes de cuenta ===== */
+.account-settings {
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f6fa;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
+}
+
+.account-settings h2 {
+  margin-bottom: 1.5rem;
+  color: #0f2547;
+  font-size: 1.6rem;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-form fieldset {
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e3e8f2;
+  border-radius: 0.75rem;
+}
+
+.settings-form legend {
+  padding: 0 0.5rem;
+  color: #2463c7;
+  font-weight: bold;
+}
+
+.settings-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #0f2547;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.settings-form input,
+.settings-form select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7em 0.8em;
+  background-color: #f4f6fa;
+  border: 1px solid #c8d2e4;
+  border-radius: 0.5rem;
+  color: #0f2547;
+  font-size: 1rem;
+}
+
+.settings-form ::placeholder {
+  color: #5a6676;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn-primary,
+.btn-danger {
+  padding: 0.85em 1em;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2463c7;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d51a6;
+}
+
+.btn-danger {
+  background-color: #ffffff;
+  border-color: #b3261e;
+  color: #b3261e;
+}
+
+.btn-danger:hover {
+  background-color: #fdf2f2;
+}
+
+.settings-form input:focus,
+.settings-form select:focus {
+  border-color: #2463c7;
+  outline: 1px solid #2463c7;
+}
+
+.btn-primary:focus-visible,
+.btn-danger:focus-visible {
+  outline: 3px solid #0f2547;
+  outline-offset: 1px;
+}
+
+/* =====================================================================
+   MEDIA QUERIES
+   ===================================================================== */
+
+/* ===== Tablet: 48em = 768px ===== */
+@media (min-width: 48em) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 0 1.5rem 2rem;
+  }
+
+  .page-heading {
+    width: 100%;
+    padding: 2.5rem 0 0;
+  }
+
+  .personal-info,
+  .achievements {
+    flex: 1 1 16rem;
+    max-width: none;
+    margin: 0;
+  }
+
+  .stats {
+    margin-top: auto;
+  }
+
+  .account-settings {
+    flex: 1 1 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .settings-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .settings-form fieldset {
+    flex: 1 1 16rem;
+  }
+
+  .form-actions {
+    flex: 1 1 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .btn-primary,
+  .btn-danger {
+    flex: 0 1 12rem;
+  }
+}
+
+/* ===== Desktop: 64em = 1024px ===== */
+@media (min-width: 64em) {
+  main {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .personal-info,
+  .account-settings,
+  .achievements {
+    padding: 2.5rem;
+  }
 }

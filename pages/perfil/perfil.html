@@ -28,8 +28,154 @@
         <a href="../tienda-rachas/tienda-rachas.html">Tienda / Rachas</a>
       </nav>
     </div>
+
+    <!-- ===== Sección principal ===== -->
     <main>
-      <h1>Perfil de usuario</h1>
+      <section class="page-heading">
+        <h1 class="profile-title">Mi perfil</h1>
+        <p>Actualiza tus datos de acceso y revisa todo lo que lograste.</p>
+      </section>
+
+      <!-- ======= Info personal ======= -->
+      <section class="personal-info">
+        <div class="avatar">JP</div>
+        <h2>Juan Pérez</h2>
+        <p>@juanperez_web</p>
+        <span>Miembro desde 9/12/18</span>
+        <ul class="stats">
+          <li>
+            <strong>350</strong>
+            <span>XP total</span>
+          </li>
+          <li>
+            <strong>9 días</strong>
+            <span>Mejor racha</span>
+          </li>
+          <li>
+            <strong>12</strong>
+            <span>Lecciones</span>
+          </li>
+        </ul>
+      </section>
+
+      <!--  ====== Logros ====== -->
+      <section class="achievements">
+        <h2>Logros</h2>
+
+        <h3>Logros conseguidos</h3>
+        <ul class="badge-list">
+          <li>
+            <span class="badge">🎯</span>
+            <span>Primeros pasos</span>
+          </li>
+          <li>
+            <span class="badge">🔥</span>
+            <span>Racha de 7 días</span>
+          </li>
+          <li>
+            <span class="badge">⚡</span>
+            <span>300 XP</span>
+          </li>
+          <li>
+            <span class="badge">📘</span>
+            <span>10 lecciones</span>
+          </li>
+        </ul>
+
+        <h3>Próximos logros</h3>
+        <ul class="badge-list locked">
+          <li>
+            <span class="badge">📅</span>
+            <span>Racha de 30 días</span>
+          </li>
+          <li>
+            <span class="badge">🏆</span>
+            <span>1.000 XP</span>
+          </li>
+          <li>
+            <span class="badge">🎓</span>
+            <span>Curso completo</span>
+          </li>
+        </ul>
+      </section>
+
+      <!--  ====== Ajustes cuenta ====== -->
+      <section class="account-settings">
+        <h2>Ajustes de cuenta</h2>
+
+        <form class="settings-form" method="post">
+          <fieldset>
+            <legend>Información personal</legend>
+
+            <label for="full-name">Nombre completo</label>
+            <input
+              id="full-name"
+              name="full-name"
+              type="text"
+              value="Juan Pérez"
+              autocomplete="name"
+              disabled
+            />
+
+            <label for="email">Email institucional</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value="juan.perez@alumnos.unlam.edu.ar"
+              autocomplete="email"
+              disabled
+            />
+
+            <label for="language">Idioma preferido de la interfaz</label>
+            <select id="language" name="language" required>
+              <option lang="es" selected>Español</option>
+              <option lang="en">English</option>
+              <option lang="de">Deutsch</option>
+              <option lang="zh">中文</option>
+              <option lang="pt">Português</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Cambiar contraseña</legend>
+
+            <label for="current-password">Contraseña actual</label>
+            <input
+              id="current-password"
+              name="current-password"
+              type="password"
+              placeholder="Ingresa tu contraseña actual"
+              autocomplete="current-password"
+            />
+
+            <label for="new-password">Nueva contraseña</label>
+            <input
+              id="new-password"
+              name="new-password"
+              type="password"
+              placeholder="Mínimo 8 caracteres"
+              minlength="8"
+              autocomplete="new-password"
+            />
+
+            <label for="confirm-password">Confirmar contraseña</label>
+            <input
+              id="confirm-password"
+              name="confirm-password"
+              type="password"
+              placeholder="Repite la contraseña"
+              minlength="8"
+              autocomplete="new-password"
+            />
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="btn-primary" type="submit">Guardar cambios</button>
+            <a class="btn-danger" href="../login/login.html">Cerrar sesión</a>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
