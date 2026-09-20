@@ -3,3 +3,66 @@ h1 {
   font-family: Arial, sans-serif;
   text-align: center;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas:
+    "t1  t1  t1"
+    "t21 t22 t23";
+  height: 100vh;
+  gap: 1 rem;
+  padding: 0,5 rem;
+}
+
+.contenedor1 > section {
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto1  { grid-area: t1; }
+.texto21 { grid-area: t21; }
+.texto22 { grid-area: t22; }
+.texto23 { grid-area: t23; }
+
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+}
+
+.leccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* reparte: icono arriba, título en el medio, botón abajo */
+  align-items: center;
+  min-height: 20rem; /* dale una altura para que se note el reparto */
+  text-align: center;
+  padding: 1rem;
+}
+
+.leccion .icono {
+  margin-bottom: 1rem;
+}
+
+.leccion .titulo {
+  margin: 1rem 0;
+}
+
+.leccion .estado,
+.leccion .boton {
+  margin-top: auto; /* empuja el estado/botón al fondo si no usás space-between */
+}
+
+.boton-oculto {
+  visibility: hidden; 
+}
