@@ -4,11 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio de sesión | LingoWeb</title>
+    <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
+    <!-- ===== Sección principal ===== -->
     <main>
-      <h1>Inicio de sesión</h1>
+      <section class="login-card">
+        <!-- ======= Banner institucional con el imagotipo ======= -->
+        <div class="login-banner">
+          <p class="brand"><span aria-hidden="true">L</span> LingoWeb</p>
+          <p class="tagline">
+            Aprende Inglés, Alemán y Chino gratis y de forma divertida
+          </p>
+        </div>
+
+        <div class="login-body">
+          <h1>Iniciar sesión</h1>
+
+          <!-- ======= Formulario de credenciales ======= -->
+          <form class="login-form">
+            <label for="user">Usuario / Email</label>
+            <input
+              id="user"
+              name="user"
+              type="text"
+              placeholder="juanperez_web"
+              autocomplete="username"
+              required
+            />
+
+            <label for="password">Contraseña</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Ingresa tu contraseña"
+              autocomplete="current-password"
+              required
+            />
+
+            <a class="btn-primary" href="../dashboard/dashboard.html"
+              >Iniciar Sesión</a
+            >
+          </form>
+
+          <!-- ======= Enlaces de ayuda ======= -->
+          <p class="login-links">
+            <a href="../recuperar/recuperar.html">¿Olvidaste tu contraseña?</a>
+          </p>
+          <p class="login-links">
+            ¿No tienes cuenta?
+            <a href="../registro/registro.html">Créala aquí</a>
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
