@@ -28,8 +28,157 @@
         <a href="../tienda-rachas/tienda-rachas.html">Tienda / Rachas</a>
       </nav>
     </div>
+
+    <!-- ===== Sección principal ===== -->
     <main>
-      <h1>Ranking de estudiantes</h1>
+      <section class="page-heading">
+        <h1 class="ranking-title">Ranking de estudiantes</h1>
+        <p>Competí cada semana y subí de liga según la XP que sumes.</p>
+      </section>
+
+      <!-- ======= Selector de liga ======= -->
+      <section class="league-picker">
+        <label for="league">Liga actual</label>
+        <select id="league" name="league">
+          <option selected>Liga Bronce</option>
+          <option>Liga Plata</option>
+          <option>Liga Oro</option>
+        </select>
+      </section>
+
+      <!-- ======= Tabla de clasificación ======= -->
+      <section class="ranking-card">
+        <table class="ranking-table">
+          <caption>
+            <strong
+              ><span>🏆</span> Tabla de Clasificación · Liga de Bronce</strong
+            >
+            <span>Los 5 primeros ascienden a la Liga de Plata esta semana</span>
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Puesto</th>
+              <th scope="col" class="col-student">Estudiante</th>
+              <th scope="col">XP Semanal</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row"><span>🥇</span> 1</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">MG</span>
+                  MarkZ_22
+                </div>
+              </td>
+              <td>420 XP</td>
+              <td>Zona de Ascenso</td>
+            </tr>
+            <tr class="current-user">
+              <th scope="row"><span>🥈</span> 2</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">JP</span>
+                  JuanPerez (Tú)
+                </div>
+              </td>
+              <td>350 XP</td>
+              <td>Zona de Ascenso</td>
+            </tr>
+            <tr>
+              <th scope="row"><span>🥉</span> 3</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">CD</span>
+                  Elon_Dev
+                </div>
+              </td>
+              <td>330 XP</td>
+              <td>Zona de Ascenso</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">LS</span>
+                  SteveJ
+                </div>
+              </td>
+              <td>300 XP</td>
+              <td>Zona de Ascenso</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">NM</span>
+                  JWalke
+                </div>
+              </td>
+              <td>275 XP</td>
+              <td>Zona de Ascenso</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">SA</span>
+                  SofIA
+                </div>
+              </td>
+              <td>240 XP</td>
+              <td>Se mantiene</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">ML</span>
+                  MarIA_26
+                </div>
+              </td>
+              <td>205 XP</td>
+              <td>Se mantiene</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">AG</span>
+                  Ada_Love
+                </div>
+              </td>
+              <td>180 XP</td>
+              <td>Se mantiene</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">PR</span>
+                  BillG
+                </div>
+              </td>
+              <td>120 XP</td>
+              <td>Zona de Descenso</td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>
+                <div class="student">
+                  <span class="student-avatar">VT</span>
+                  TimBL
+                </div>
+              </td>
+              <td>95 XP</td>
+              <td>Zona de Descenso</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
   </body>
 </html>

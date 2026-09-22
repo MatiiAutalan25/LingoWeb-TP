@@ -1,5 +1,176 @@
-h1 {
+main {
+  padding: 0 1rem 2rem;
+}
+
+/* ===== Encabezado de la página ===== */
+.ranking-title {
   color: #2463c7;
   font-family: Arial, sans-serif;
+}
+
+.page-heading {
+  padding-top: 2rem;
   text-align: center;
+}
+
+.page-heading p {
+  margin-top: 0.5rem;
+  color: #52627d;
+}
+
+/* ===== Selector de liga ===== */
+.league-picker {
+  max-width: 48rem;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  background-color: #f4f6fa;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
+}
+
+.league-picker label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #0f2547;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.league-picker select {
+  width: 100%;
+  padding: 0.7em 0.8em;
+  background-color: #ffffff;
+  border: 1px solid #7a8ba7;
+  border-radius: 0.5rem;
+  color: #0f2547;
+  font-size: 1rem;
+}
+
+.league-picker select:focus {
+  border-color: #2463c7;
+  outline: 1px solid #2463c7;
+}
+
+.league-picker p {
+  margin-top: 0.5rem;
+  color: #5a6676;
+  font-size: 0.8rem;
+}
+
+/* ===== Tarjeta que contiene la tabla ===== */
+.ranking-card {
+  max-width: 48rem;
+  margin: 1.5rem auto;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* ===== Tabla ===== */
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ranking-table caption {
+  padding: 1rem;
+  background-color: #ce8968;
+  color: #ffffff;
+}
+
+.ranking-table caption strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.ranking-table caption span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+}
+
+/* Fila de encabezados de columna */
+.ranking-table thead th {
+  padding: 0.75rem 0.5rem;
+  background-color: #e3e8f2;
+  color: #0f2547;
+  font-size: 0.85rem;
+}
+
+/* Celdas de datos */
+.ranking-table tbody th,
+.ranking-table tbody td {
+  padding: 0.75rem 0.5rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e3e8f2;
+  color: #0f2547;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ===== Avatar + nombre ===== */
+.student {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.student-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: #16386f;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.current-user th,
+.current-user td {
+  background-color: #dbe6f8;
+  font-weight: bold;
+}
+
+/* 
+=====================================================================
+MEDIA QUERIES
+===================================================================== 
+*/
+
+/* ===== Tablet y desktop: 48em = 768px ===== */
+@media (min-width: 48em) {
+  main {
+    padding: 0 1.5rem 2rem;
+  }
+
+  .ranking-table caption {
+    padding: 1.5rem;
+  }
+
+  .ranking-table thead th,
+  .ranking-table tbody th,
+  .ranking-table tbody td {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .student {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .ranking-table .col-student {
+    text-align: left;
+  }
+
+  .student-avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.8rem;
+  }
 }
