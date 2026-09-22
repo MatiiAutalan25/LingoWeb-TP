@@ -4,11 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recuperar contraseña | LingoWeb</title>
+    <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="recuperar.css" />
   </head>
   <body>
+    <!-- ===== Sección principal =====
+         Sin menú de navegación: todavía no hay sesión iniciada. -->
     <main>
-      <h1>Recuperar contraseña</h1>
+      <section class="recover-card">
+        <!-- ======= Banner institucional con el imagotipo ======= -->
+        <div class="recover-banner">
+          <p class="brand"><span aria-hidden="true">L</span> LingoWeb</p>
+          <p class="tagline">Recuperá el acceso a tu cuenta</p>
+        </div>
+
+        <div class="recover-body">
+          <h1>Recuperar contraseña</h1>
+          <p class="recover-intro">
+            Ingresá tu email y te enviamos un enlace para crear una contraseña
+            nueva. Después volvés a iniciar sesión con ella.
+          </p>
+
+          <!-- ======= Formulario de recupero ======= -->
+          <form class="recover-form">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="juan.perez@alumnos.unlam.edu.ar"
+              autocomplete="email"
+              required
+            />
+
+            <a class="btn-primary" href="../login/login.html"
+              >Recuperar contraseña</a
+            >
+          </form>
+
+          <!-- ======= Vuelta al login ======= -->
+          <p class="recover-links">
+            <a href="../login/login.html">Volver a iniciar sesión</a>
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
