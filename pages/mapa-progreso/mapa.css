@@ -1,24 +1,30 @@
 /* Colores compartidos por los mapas de chino, inglés y alemán */
 :root {
-  --bg-main: #131f24;
+  --bg-main: #ffffff;
   --blue-main: #2463c7;
-  --gray-node: #37464f;
-  --gray-icon: #8a9ba5;
+  --gray-node: #e2eaf8;
+  --gray-icon: #66758a;
+  --border-color: #cdd9ee;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   background-color: var(--bg-main);
   display: flex;
-  justify-content: center;
-  padding: 60px 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 30px;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  font-family: inherit;
 }
 
 /* Camino vertical de niveles */
@@ -29,6 +35,22 @@ body {
   gap: 30px;
   width: 100%;
   max-width: 400px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.map-footer {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-link {
+  color: var(--blue-main);
+  font-size: 16px;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .level-row {
@@ -59,7 +81,7 @@ body {
 
 .node.locked {
   background-color: var(--gray-node);
-  border-color: var(--gray-node);
+  border-color: var(--border-color);
   color: var(--gray-icon);
 }
 
@@ -71,7 +93,7 @@ body {
 
 .node-ring {
   padding: 6px;
-  border: 2px solid var(--gray-node);
+  border: 2px solid var(--border-color);
   border-radius: 50%;
 }
 
@@ -88,9 +110,10 @@ body {
   top: -40px;
   background-color: var(--bg-main);
   color: var(--blue-main);
-  border: 1px solid var(--gray-node);
+  border: 1px solid var(--border-color);
   padding: 6px 12px;
   border-radius: 4px;
+  font-family: inherit;
   font-weight: bold;
   font-size: 13px;
 }

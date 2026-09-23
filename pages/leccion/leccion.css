@@ -1,12 +1,12 @@
-/* Variables: colores del proyecto reutilizables en toda la lección */
+
 :root {
-  --lesson-bg: #131f24;
-  --text-light: #ffffff;
-  --text-muted: #afafaf;
+  --lesson-bg: #ffffff;
+  --text-main: #33415c;
+  --text-muted: #66758a;
   --blue-main: #2463c7;
-  --border-dark: #37464f;
-  --tile-bg: #131f24;
-  --tile-border: #4b5962;
+  --border-color: #cdd9ee;
+  --tile-bg: #f0f4fb;
+  --tile-border: #cdd9ee;
   --success-bg: #e8f0fb;
   --success-text: #2463c7;
   --error-bg: #ffdfe0;
@@ -16,13 +16,12 @@
 /* Contenedor principal: flexbox vertical centra el ejercicio */
 .lesson-main {
   background-color: var(--lesson-bg);
-  color: var(--text-light);
+  color: var(--text-main);
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: calc(100vh - 120px);
   padding: 30px 20px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Vista 4 - Barra superior: salida, progreso y vidas */
@@ -58,7 +57,7 @@
 
 .progress-bar-container {
   flex-grow: 1;
-  background-color: var(--border-dark);
+  background-color: var(--border-color);
   height: 16px;
   border-radius: 4px;
   overflow: hidden;
@@ -73,7 +72,7 @@
 .progress-text {
   font-size: 14px;
   font-weight: bold;
-  color: var(--text-light);
+  color: var(--text-main);
 }
 
 .lives {
@@ -100,7 +99,7 @@
   margin-bottom: 30px;
   font-weight: bold;
   text-align: left;
-  color: var(--text-light);
+  color: var(--text-main);
 }
 
 .source-phrase {
@@ -133,7 +132,7 @@
   align-content: flex-start;
   gap: 10px;
   min-height: 70px;
-  border-bottom: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
@@ -153,7 +152,7 @@
 
 .word-tile {
   background-color: var(--tile-bg);
-  color: var(--text-light);
+  color: var(--text-main);
   border: 2px solid var(--tile-border);
   border-radius: 4px;
   padding: 12px 18px;
@@ -164,8 +163,8 @@
 
 /* Palabra ya usada en la respuesta */
 .word-tile.empty {
-  background-color: var(--border-dark);
-  border-color: var(--border-dark);
+  background-color: #e2eaf8;
+  border-color: #e2eaf8;
   color: transparent;
 }
 
@@ -173,7 +172,7 @@
 .lesson-footer {
   width: 100%;
   max-width: 600px;
-  border-top: 2px solid var(--border-dark);
+  border-top: 2px solid var(--border-color);
   padding-top: 30px;
   margin-top: auto;
   display: flex;
@@ -202,7 +201,7 @@
   width: auto;
   background-color: transparent;
   color: var(--text-muted);
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--border-color);
   font-size: 14px;
   text-transform: none;
   padding: 10px 16px;
