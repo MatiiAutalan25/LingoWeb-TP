@@ -1,5 +1,282 @@
-h1 {
-  color: #2463c7;
-  font-family: Arial, sans-serif;
+/* Variables: colores del proyecto reutilizables en toda la lección */
+:root {
+  --lesson-bg: #131f24;
+  --text-light: #ffffff;
+  --text-muted: #afafaf;
+  --blue-main: #2463c7;
+  --border-dark: #37464f;
+  --tile-bg: #131f24;
+  --tile-border: #4b5962;
+  --success-bg: #e8f0fb;
+  --success-text: #2463c7;
+  --error-bg: #ffdfe0;
+  --error-text: #ea2b2b;
+}
+
+/* Contenedor principal: flexbox vertical centra el ejercicio */
+.lesson-main {
+  background-color: var(--lesson-bg);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  padding: 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Vista 4 - Barra superior: salida, progreso y vidas */
+.lesson-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+  gap: 15px;
+}
+
+.close-btn {
+  color: var(--text-muted);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.progress-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.progress-bar-container {
+  flex-grow: 1;
+  background-color: var(--border-dark);
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: var(--blue-main);
+  height: 100%;
+  width: 60%;
+}
+
+.progress-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+.lives {
+  color: #ff4b4b;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+/* Área del ejercicio: pregunta, frase origen y palabras */
+.lesson-content {
+  width: 100%;
+  max-width: 600px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--text-light);
+}
+
+.source-phrase {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+.audio-btn {
+  background-color: var(--blue-main);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+/* Zona donde el usuario arma la traducción */
+.answer-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+  min-height: 70px;
+  border-bottom: 2px solid var(--border-dark);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.word-bank-label {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.word-bank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.word-tile {
+  background-color: var(--tile-bg);
+  color: var(--text-light);
+  border: 2px solid var(--tile-border);
+  border-radius: 4px;
+  padding: 12px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Palabra ya usada en la respuesta */
+.word-tile.empty {
+  background-color: var(--border-dark);
+  border-color: var(--border-dark);
+  color: transparent;
+}
+
+/* Pie: botón principal estilizado como enlace (<a>) */
+.lesson-footer {
+  width: 100%;
+  max-width: 600px;
+  border-top: 2px solid var(--border-dark);
+  padding-top: 30px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--blue-main);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
   text-align: center;
+  text-decoration: none;
+}
+
+.check-btn-demo {
+  width: auto;
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-dark);
+  font-size: 14px;
+  text-transform: none;
+  padding: 10px 16px;
+}
+
+/* Panel de corrección: oculto hasta activarse con :target */
+.feedback-panel {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  z-index: 100;
+}
+
+/* :target muestra el panel al hacer clic en #feedback-exito o #feedback-error */
+.feedback-panel:target {
+  display: flex;
+}
+
+.feedback-panel.success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.feedback-panel.error {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.feedback-message {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.feedback-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.feedback-panel.success .feedback-btn {
+  background-color: var(--blue-main);
+}
+
+.feedback-panel.error .feedback-btn {
+  background-color: var(--error-text);
+}
+
+/* Adaptación a pantallas chicas */
+@media (max-width: 480px) {
+  .word-tile {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  .question-title {
+    font-size: 20px;
+  }
+
+  .source-phrase {
+    font-size: 18px;
+  }
+
+  .progress-label {
+    display: none;
+  }
 }
