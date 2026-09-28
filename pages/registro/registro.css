@@ -80,12 +80,15 @@ main {
   margin-top: 0.5rem;
   padding: 0.85em 1em;
   background-color: #2463c7;
+  border: none;
   border-radius: 0.5rem;
   color: #ffffff;
+  font-family: inherit;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
