@@ -31,8 +31,202 @@
         >
       </nav>
     </div>
+
+    <!-- ===== Sección principal ===== -->
     <main>
-      <h1>Tienda y rachas</h1>
+      <section class="page-heading">
+        <h1 class="store-title">Tienda y rachas</h1>
+        <p>Todo se canjea con lo que ya ganaste practicando.</p>
+      </section>
+
+      <!-- ======= Lo que tenés hoy ======= -->
+      <section class="wallet">
+        <h2>Lo que tenés hoy</h2>
+        <ul class="wallet-stats">
+          <li>
+            <strong>5 días</strong>
+            <span>Racha actual</span>
+          </li>
+          <li>
+            <strong>6 días</strong>
+            <span>Mejor racha</span>
+          </li>
+          <li>
+            <strong>820</strong>
+            <span>XP total</span>
+          </li>
+          <li>
+            <strong>3</strong>
+            <span>Vidas</span>
+          </li>
+          <li>
+            <strong>1</strong>
+            <span>Congeladores</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======= Canje por racha ======= -->
+      <section class="store-card">
+        <form method="get" action="tienda-rachas.html">
+          <table class="store-table">
+            <caption>
+              <strong
+                ><span aria-hidden="true">🔥</span> Recompensas por
+                racha</strong
+              >
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Recompensa</th>
+                <th scope="col">Requisito</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="claimed">
+                <th scope="row">
+                  <span aria-hidden="true">❤️</span> 1 vida extra
+                </th>
+                <td>3 días de racha</td>
+                <td>
+                  <span class="tag-claimed"
+                    ><span aria-hidden="true">✓</span> Canjeado</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span aria-hidden="true">❤️</span> 2 vidas extra
+                </th>
+                <td>5 días de racha</td>
+                <td>
+                  <button class="btn-redeem" type="submit">Canjear</button>
+                </td>
+              </tr>
+              <tr class="locked">
+                <th scope="row">
+                  <span aria-hidden="true">🛡️</span> Escudo de racha
+                </th>
+                <td>14 días de racha</td>
+                <td>Te faltan 8 días</td>
+              </tr>
+              <tr class="locked">
+                <th scope="row">
+                  <span aria-hidden="true">👑</span> Insignia Imparable
+                </th>
+                <td>30 días de racha</td>
+                <td>Te faltan 24 días</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </section>
+
+      <!-- ======= Canje por XP ======= -->
+      <section class="store-card">
+        <form method="get" action="tienda-rachas.html">
+          <table class="store-table">
+            <caption>
+              <strong
+                ><span aria-hidden="true">⚡</span> Recompensas por XP</strong
+              >
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Recompensa</th>
+                <th scope="col">Requisito</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="claimed">
+                <th scope="row">
+                  <span aria-hidden="true">🧊</span> 1 congelador de racha
+                </th>
+                <td>250 XP</td>
+                <td>
+                  <span class="tag-claimed"
+                    ><span aria-hidden="true">✓</span> Canjeado</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span aria-hidden="true">🧊</span> 3 congeladores de racha
+                </th>
+                <td>500 XP</td>
+                <td>
+                  <button class="btn-redeem" type="submit">Canjear</button>
+                </td>
+              </tr>
+              <tr class="locked">
+                <th scope="row">
+                  <span aria-hidden="true">✨</span> Doble XP por un día
+                </th>
+                <td>1.000 XP</td>
+                <td>Te faltan 180 XP</td>
+              </tr>
+              <tr class="locked">
+                <th scope="row">
+                  <span aria-hidden="true">🎨</span> Marco de avatar dorado
+                </th>
+                <td>1.500 XP</td>
+                <td>Te faltan 680 XP</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </section>
+
+      <!-- ======= Para qué sirve cada cosa ======= -->
+      <section class="store-help">
+        <h2>Para qué sirve cada recompensa</h2>
+        <dl>
+          <dt><span aria-hidden="true">❤️</span> Vidas</dt>
+          <dd>
+            Cada respuesta incorrecta en una lección te resta una vida. Si se
+            terminan, la lección se reinicia.
+          </dd>
+
+          <dt><span aria-hidden="true">🧊</span> Congelador de racha</dt>
+          <dd>
+            Si un día no practicás, el congelador se usa solo y tu racha queda
+            intacta en lugar de volver a cero.
+          </dd>
+
+          <dt><span aria-hidden="true">🛡️</span> Escudo de racha</dt>
+          <dd>
+            Protege la racha durante todo un fin de semana, sin consumir
+            congeladores.
+          </dd>
+
+          <dt><span aria-hidden="true">✨</span> Doble XP por un día</dt>
+          <dd>
+            Durante 24 horas, cada lección que completes suma el doble de XP
+            para el ranking semanal.
+          </dd>
+
+          <dt><span aria-hidden="true">👑</span> Insignia Imparable</dt>
+          <dd>
+            Se muestra en tu perfil, junto a los demás logros. No afecta al
+            juego, es para presumir.
+          </dd>
+
+          <dt><span aria-hidden="true">🎨</span> Marco de avatar dorado</dt>
+          <dd>Rodea tus iniciales con un borde de oro.</dd>
+        </dl>
+
+        <p class="store-note">
+          Los canjes se reinician el primer día de cada mes: todo lo que figure
+          como canjeado vuelve a estar disponible. Tu racha y tu XP total no se
+          reinician.
+        </p>
+      </section>
     </main>
   </body>
 </html>

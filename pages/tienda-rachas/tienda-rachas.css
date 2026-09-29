@@ -1,5 +1,208 @@
-h1 {
+main {
+  padding: 0 1rem 2rem;
+}
+
+/* ===== Encabezado de la página ===== */
+.store-title {
   color: #2463c7;
   font-family: Arial, sans-serif;
+}
+
+.page-heading {
+  padding-top: 2rem;
   text-align: center;
+}
+
+.page-heading p {
+  margin-top: 0.5rem;
+  color: #52627d;
+}
+
+/* ===== Lo que tenés hoy ===== */
+.wallet {
+  max-width: 48rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f4f6fa;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
+}
+
+.wallet h2 {
+  margin-bottom: 1rem;
+  color: #0f2547;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.wallet-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.wallet-stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 6rem;
+  gap: 0.25rem;
+  padding: 1rem 0.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.wallet-stats strong {
+  color: #0f2547;
+  font-size: 1.2rem;
+}
+
+.wallet-stats span {
+  color: #5a6676;
+  font-size: 0.8rem;
+}
+
+/* ===== Catálogo de canje ===== */
+.store-card {
+  max-width: 48rem;
+  margin: 1.5rem auto;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.store-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.store-table caption {
+  padding: 1rem;
+  background-color: #16386f;
+  color: #ffffff;
+}
+
+.store-table caption strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.store-table thead th {
+  padding: 0.75rem 0.5rem;
+  background-color: #e3e8f2;
+  color: #0f2547;
+  font-size: 0.85rem;
+}
+
+.store-table tbody th,
+.store-table tbody td {
+  padding: 0.75rem 0.5rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e3e8f2;
+  color: #0f2547;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.claimed th,
+.claimed td {
+  background-color: #dbe6f8;
+}
+
+.tag-claimed {
+  color: #16386f;
+  font-weight: bold;
+}
+
+.locked th,
+.locked td {
+  background-color: #f4f6fa;
+  color: #5a6676;
+}
+
+/* ===== Botón de canje ===== */
+.btn-redeem {
+  padding: 0.5em 0.9em;
+  background-color: #2463c7;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-redeem:hover {
+  background-color: #1d51a6;
+}
+
+.btn-redeem:focus-visible {
+  outline: 3px solid #0f2547;
+  outline-offset: 1px;
+}
+
+/* ===== Explicación de las recompensas ===== */
+.store-help {
+  max-width: 48rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background-color: #f4f6fa;
+  border: 1px solid #e3e8f2;
+  border-radius: 1rem;
+}
+
+.store-help h2 {
+  margin-bottom: 1rem;
+  color: #0f2547;
+  font-size: 1.2rem;
+}
+
+.store-help dt {
+  margin-top: 1rem;
+  color: #0f2547;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.store-help dd {
+  margin-top: 0.25rem;
+  color: #52627d;
+  font-size: 0.9rem;
+}
+
+.store-note {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e3e8f2;
+  color: #52627d;
+  font-size: 0.9rem;
+}
+
+/* =====================================================================
+   MEDIA QUERIES
+   ===================================================================== */
+
+/* ===== Tablet y desktop: 48em = 768px ===== */
+@media (min-width: 48em) {
+  main {
+    padding: 0 1.5rem 2rem;
+  }
+
+  .wallet,
+  .store-help {
+    padding: 2rem;
+  }
+
+  .store-table caption {
+    padding: 1.5rem;
+  }
+
+  .store-table thead th,
+  .store-table tbody th,
+  .store-table tbody td {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
