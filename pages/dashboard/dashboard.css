@@ -11,16 +11,16 @@ h1 {
 } 
 
 html,	body	{ 
-  width:	100vw;
-  height:	100vh; 
-  overflow:	hidden; 
+  width:	100%;
+  min-height:	100vh; 
   font-family:	Arial,	sans-serif; 
 } 
   
 .figura	{ 
   display:grid;
-  width:	100vw;
-  height:	100vh; 
+  width:	70%;
+  margin:	0	auto;
+  min-height:	100vh; 
   
   /*	4	columnas	iguales,	6	filas:	header(1)	+	texto2(1)	+	cuerpo(4)	*/ 
        
@@ -38,13 +38,16 @@ html,	body	{
   
   @media (max-width: 40em) {
   .figura {
-    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     grid-template-areas:
-      "t2  t2  t2  t2"
-      "a31 a41 a51 a61"
-      "a32 a42 a52 a62"
-      "a33 a43 a53 a63"
-      "a34 a44 a54 a64";
+      "t2  t2  t2"
+      "a31 a41 a51"
+      "a32 a42 a52"
+      "a33 a43 a53"
+      "a34 a44 a54"
+      "a61 a61 a61";
   }
 }
 
@@ -52,7 +55,8 @@ html,	body	{
     display:	flex;
     align-items:	center; 
     justify-content:	center; 
-    border:	0.1rem	solid	#333; 
+    border:	1px	solid	#e3e8f2;
+    border-radius:	0.75rem; 
     text-align:	center; font-size:	1rem;
   } 
              
