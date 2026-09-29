@@ -23,7 +23,11 @@
           <h1>Iniciar sesión</h1>
 
           <!-- ======= Formulario de credenciales ======= -->
-          <form class="login-form">
+          <form
+            class="login-form"
+            method="get"
+            action="../dashboard/dashboard.html"
+          >
             <label for="user">Usuario / Email</label>
             <input
               id="user"
@@ -44,9 +48,7 @@
               required
             />
 
-            <a class="btn-primary" href="../dashboard/dashboard.html"
-              >Iniciar Sesión</a
-            >
+            <button class="btn-primary" type="submit">Iniciar Sesión</button>
           </form>
 
           <!-- ======= Enlaces de ayuda ======= -->

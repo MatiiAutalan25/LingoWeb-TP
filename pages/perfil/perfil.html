@@ -16,7 +16,7 @@
         <div class="quick-stats">
           <span>🔥 5 días</span>
           <span>⚡ 350 XP</span>
-          <strong>JP</strong>
+          <a href="../perfil/perfil.html" aria-label="Mi perfil">JP</a>
         </div>
       </header>
       <nav class="main-nav">
@@ -103,7 +103,7 @@
       <section class="account-settings">
         <h2>Ajustes de cuenta</h2>
 
-        <form class="settings-form" method="post">
+        <form class="settings-form" method="get" action="perfil.html">
           <fieldset>
             <legend>Información personal</legend>
 
@@ -147,6 +147,7 @@
               type="password"
               placeholder="Ingresa tu contraseña actual"
               autocomplete="current-password"
+              required
             />
 
             <label for="new-password">Nueva contraseña</label>
@@ -157,6 +158,7 @@
               placeholder="Mínimo 8 caracteres"
               minlength="8"
               autocomplete="new-password"
+              required
             />
 
             <label for="confirm-password">Confirmar contraseña</label>
@@ -167,12 +169,20 @@
               placeholder="Repite la contraseña"
               minlength="8"
               autocomplete="new-password"
+              required
             />
           </fieldset>
 
           <div class="form-actions">
-            <a class="btn-primary" href="perfil.html">Guardar cambios</a>
-            <a class="btn-danger" href="../login/login.html">Cerrar sesión</a>
+            <button class="btn-primary" type="submit">Guardar cambios</button>
+            <button
+              class="btn-danger"
+              type="submit"
+              formaction="../login/login.html"
+              formnovalidate
+            >
+              Cerrar sesión
+            </button>
           </div>
         </form>
       </section>

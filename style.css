@@ -44,7 +44,7 @@
 }
 
 .brand span,
-.quick-stats strong {
+.quick-stats a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,11 +55,22 @@
   border-radius: 0.5rem;
 }
 
-.quick-stats strong {
+/* Avatar del header: ahora es un enlace al perfil */
+.quick-stats a {
   background-color: #16386f;
   color: #ffffff;
   border-radius: 50%;
   font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.quick-stats a:hover {
+  background-color: #0f2547;
+}
+
+.quick-stats a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* ===== Navegación ===== */
