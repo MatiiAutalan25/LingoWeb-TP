@@ -83,7 +83,7 @@ main {
   font-size: 1.05rem;
 }
 
-.ranking-table caption span {
+.ranking-table caption > span {
   display: block;
   margin-top: 0.35rem;
   font-size: 0.85rem;
