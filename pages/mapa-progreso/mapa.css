@@ -24,14 +24,14 @@ body main {
 }
 
 h1 {
-  text-align: left;
-  margin-top: 20px; /* Distancia desde el borde superior */
-  margin-left: 20px; /* Distancia desde el borde izquierdo */
+  text-align: center; /* Alinea el texto a la centrado */
+  align-self: flex-start; /* Evita que el Flexbox del main lo centre */
+  margin-top: 0; /* Ajusta según lo que necesites desde el borde superior */
+  margin-left: 0; /* Ajusta según lo que necesites desde el borde izquierdo */
   margin-bottom: 40px;
-  width: 100%;
+  width: auto; /* Quitamos el 100% para que no ocupe toda la pantalla */
   font-size: 1.5rem;
 }
-
 button {
   font-family: inherit;
 }
@@ -46,12 +46,13 @@ button {
   max-width: 400px;
   flex-grow: 1;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .map-footer {
   width: 100%;
   max-width: 400px;
-  margin-top: 30px;
+  margin: 30px auto 0;
   text-align: center;
 }
 
@@ -60,6 +61,12 @@ button {
   font-size: 16px;
   text-decoration: underline;
   text-transform: uppercase;
+
+  /* Agrega estas propiedades para centrarlo */
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px; /* Opcional: para darle un poco de respiro arriba */
 }
 
 .level-row {
@@ -131,10 +138,6 @@ button {
   font-family: inherit;
   font-weight: bold;
   font-size: 13px;
-}
-
-.has-mascot {
-  position: relative;
 }
 
 .square-icon {
