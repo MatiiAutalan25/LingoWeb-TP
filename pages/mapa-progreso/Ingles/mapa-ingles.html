@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="../mapa.css" />
   </head>
   <body>
+    <div class="app-top">
+      <header class="app-header">
+        <a class="brand" href="../../dashboard/dashboard.html">
+          <span aria-hidden="true">L</span> LingoWeb
+        </a>
+        <div class="quick-stats">
+          <span>🔥 5 días</span>
+          <span>⚡ 350 XP</span>
+          <a href="../../perfil/perfil.html" aria-label="Mi perfil">JP</a>
+        </div>
+      </header>
+      <nav class="main-nav">
+        <a class="active" href="../../dashboard/dashboard.html" aria-current="true"
+          >Cursos</a
+        >
+        <a href="../../perfil/perfil.html">Perfil</a>
+        <a href="../../ranking/ranking.html">Ranking</a>
+        <a href="../../tienda-rachas/tienda-rachas.html">Tienda / Rachas</a>
+      </nav>
+    </div>
+
     <h1>Lecciones del Curso de Inglés</h1>
     <main class="map-container">
       <div class="level-row">
+        <a class="node done" href="../../leccion/leccion-ingles-1.html">
+          <span class="icon">★</span>
+        </a>
+      </div>
+
+      <div class="level-row offset-left-1">
         <div class="node-wrapper active">
-          <div class="tooltip">EMPEZAR</div>
+          <div class="tooltip">CONTINUAR</div>
           <div class="node-ring">
-            <a class="node current" href="../../leccion/leccion-ingles-1.html">
+            <a class="node current" href="../../leccion/leccion-ingles-4.html">
               <span class="icon">★</span>
             </a>
           </div>
         </div>
-      </div>
-
-      <div class="level-row offset-left-1">
-        <a class="node current" href="../../leccion/leccion-ingles-4.html">
-          <span class="icon">★</span>
-        </a>
       </div>
 
       <div class="level-row has-mascot">
@@ -34,9 +55,9 @@
       </div>
 
       <div class="level-row offset-right-1">
-<a class="node current" href="../../leccion/leccion-ingles-7.html">
+        <button class="node locked" type="button">
           <span class="icon">🎧</span>
-        </a>
+        </button>
       </div>
 
       <div class="level-row offset-left-2">

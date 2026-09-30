@@ -18,8 +18,7 @@ body main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 30px;
-  min-height: 100vh;
+  padding: 20px 20px 16px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -28,7 +27,7 @@ h1 {
   align-self: flex-start; /* Evita que el Flexbox del main lo centre */
   margin-top: 0; /* Ajusta según lo que necesites desde el borde superior */
   margin-left: 0; /* Ajusta según lo que necesites desde el borde izquierdo */
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   width: auto; /* Quitamos el 100% para que no ocupe toda la pantalla */
   font-size: 1.5rem;
 }
@@ -44,8 +43,6 @@ button {
   gap: 30px;
   width: 100%;
   max-width: 400px;
-  flex-grow: 1;
-  justify-content: center;
   margin: 0 auto;
 }
 
@@ -113,6 +110,13 @@ button {
   color: white;
 }
 
+/* Lección ya completada: navy, se distingue del azul del nivel actual */
+.node.done {
+  background-color: #16386f;
+  border-color: #16386f;
+  color: white;
+}
+
 .node-ring {
   padding: 6px;
   border: 2px solid var(--border-color);
@@ -120,16 +124,17 @@ button {
 }
 
 .node-wrapper.active {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Etiqueta "EMPEZAR" sobre el nivel disponible */
+/* Etiqueta sobre el nivel disponible. Va en el flujo normal, así el
+   align-items: center del wrapper la centra sola sobre el nodo. Antes
+   era position: absolute sin left ni transform, y por eso quedaba
+   corrida y encima se montaba sobre el nodo de arriba. */
 .tooltip {
-  position: absolute;
-  top: -40px;
+  margin-bottom: 8px;
   background-color: var(--bg-main);
   color: var(--blue-main);
   border: 1px solid var(--border-color);
