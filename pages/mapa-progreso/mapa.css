@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-body {
+body main {
   background-color: var(--bg-main);
   display: flex;
   flex-direction: column;
@@ -21,6 +21,15 @@ body {
   padding: 40px 20px 30px;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: left;
+  margin-top: 20px; /* Distancia desde el borde superior */
+  margin-left: 20px; /* Distancia desde el borde izquierdo */
+  margin-bottom: 40px;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 button {
@@ -60,9 +69,15 @@ button {
 }
 
 /* Desplazamiento lateral para simular camino serpenteante */
-.offset-left-1 { margin-left: -30px; }
-.offset-right-1 { margin-left: 20px; }
-.offset-left-2 { margin-left: -15px; }
+.offset-left-1 {
+  margin-left: -30px;
+}
+.offset-right-1 {
+  margin-left: 20px;
+}
+.offset-left-2 {
+  margin-left: -15px;
+}
 
 /* Nodo circular: enlace si está activo, botón si está bloqueado */
 .node {
