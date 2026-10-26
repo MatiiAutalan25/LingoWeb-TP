@@ -1,3 +1,35 @@
+/* ===================================================================
+   Sistema de diseño compartido (variables + utilidades)
+   Todas las pantallas consumen estos tokens para mantener el mismo
+   lenguaje visual. Evitar hardcodear colores: usar var(--...).
+   =================================================================== */
+:root {
+  /* Marca / acciones */
+  --blue: #2463c7;
+  --blue-dark: #1d51a6;
+  --navy: #16386f;
+  --navy-dark: #0f2547;
+
+  /* Texto */
+  --text-strong: #0f2547;
+  --text-muted: #52627d;
+  --text-muted-2: #5a6676;
+
+  /* Superficies y bordes */
+  --surface: #f4f6fa;
+  --surface-alt: #e3e8f2;
+  --white: #ffffff;
+  --border: #e3e8f2;
+  --border-strong: #7a8ba7;
+
+  /* Radios */
+  --radius-card: 1rem;
+  --radius-btn: 0.5rem;
+
+  /* Layout */
+  --content-max: 48rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +41,8 @@
 .app-top {
   position: sticky;
   top: 0;
-  z-index: 10;
+  /* Solo necesita quedar sobre el contenido en flujo normal (z-index: 0) */
+  z-index: 1;
 }
 
 /* ===== Cabecera ===== */
@@ -21,8 +54,8 @@
   gap: 0.75rem;
   min-height: 3.5rem;
   padding: 0 1.5rem;
-  background-color: #2463c7;
-  color: #ffffff;
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .brand,
@@ -33,7 +66,7 @@
 }
 
 .brand {
-  color: #ffffff;
+  color: var(--white);
   font-size: 1.25rem;
   font-weight: bold;
   text-decoration: none;
@@ -50,26 +83,26 @@
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  background-color: #ffffff;
-  color: #2463c7;
-  border-radius: 0.5rem;
+  background-color: var(--white);
+  color: var(--blue);
+  border-radius: var(--radius-btn);
 }
 
 /* Avatar del header: ahora es un enlace al perfil */
 .quick-stats a {
-  background-color: #16386f;
-  color: #ffffff;
+  background-color: var(--navy);
+  color: var(--white);
   border-radius: 50%;
   font-size: 0.85rem;
   text-decoration: none;
 }
 
 .quick-stats a:hover {
-  background-color: #0f2547;
+  background-color: var(--navy-dark);
 }
 
 .quick-stats a:focus-visible {
-  outline: 3px solid #ffffff;
+  outline: 3px solid var(--white);
   outline-offset: 2px;
 }
 
@@ -79,7 +112,7 @@
   flex-wrap: wrap;
   padding: 0 1.5rem;
   background-color: #f0f4fb;
-  border-bottom: 1px solid #cdd9ee;
+  border-bottom: 1px solid var(--border);
 }
 
 .main-nav a {
@@ -91,11 +124,69 @@
 
 .main-nav a:hover {
   background-color: #e2eaf8;
-  color: #2463c7;
+  color: var(--blue);
 }
 
 .main-nav a.active {
-  border-bottom-color: #2463c7;
-  color: #2463c7;
+  border-bottom-color: var(--blue);
+  color: var(--blue);
   font-weight: bold;
+}
+
+/* ===================================================================
+   Utilidades reutilizables (sistema de diseño)
+   =================================================================== */
+
+/* Encabezado de página: título azul + subtítulo gris.
+   Reemplaza el patrón .page-heading duplicado en perfil/ranking/tienda. */
+.page-heading {
+  padding: 2rem 1.5rem 0;
+  text-align: center;
+}
+
+.page-heading h1 {
+  color: var(--blue);
+  font-family: Arial, sans-serif;
+}
+
+.page-heading p {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
+/* Tarjeta base: fondo suave, borde y esquinas redondeadas.
+   Mismo contenedor que usan perfil, ranking, tienda y login. */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+/* Botón de acción primario (azul). Base compartida para los
+   botones/enlaces de acción de toda la app. */
+.btn {
+  display: inline-block;
+  padding: 0.85em 1em;
+  border: 1px solid transparent;
+  border-radius: var(--radius-btn);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-dark);
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--navy-dark);
+  outline-offset: 1px;
 }

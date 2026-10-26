@@ -1,10 +1,12 @@
-/* Colores compartidos por los mapas de chino, inglés y alemán */
+/* Colores de los mapas: alias locales que apuntan a los tokens
+   globales de style.css para mantener el mismo lenguaje visual.
+   El borde ahora usa --border (antes #cdd9ee, propio del mapa). */
 :root {
-  --bg-main: #ffffff;
-  --blue-main: #2463c7;
+  --bg-main: var(--white);
+  --blue-main: var(--blue);
   --gray-node: #e2eaf8;
   --gray-icon: #66758a;
-  --border-color: #cdd9ee;
+  --border-color: var(--border);
 }
 
 * {
@@ -112,8 +114,8 @@ button {
 
 /* Lección ya completada: navy, se distingue del azul del nivel actual */
 .node.done {
-  background-color: #16386f;
-  border-color: #16386f;
+  background-color: var(--navy);
+  border-color: var(--navy);
   color: white;
 }
 

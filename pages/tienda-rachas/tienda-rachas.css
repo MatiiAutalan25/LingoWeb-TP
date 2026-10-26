@@ -4,7 +4,7 @@ main {
 
 /* ===== Encabezado de la página ===== */
 .store-title {
-  color: #2463c7;
+  color: var(--blue);
   font-family: Arial, sans-serif;
 }
 
@@ -15,22 +15,22 @@ main {
 
 .page-heading p {
   margin-top: 0.5rem;
-  color: #52627d;
+  color: var(--text-muted);
 }
 
 /* ===== Lo que tenés hoy ===== */
 .wallet {
-  max-width: 48rem;
+  max-width: var(--content-max);
   margin: 2rem auto;
   padding: 1.5rem;
-  background-color: #f4f6fa;
-  border: 1px solid #e3e8f2;
-  border-radius: 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
 }
 
 .wallet h2 {
   margin-bottom: 1rem;
-  color: #0f2547;
+  color: var(--navy-dark);
   font-size: 1.2rem;
   text-align: center;
 }
@@ -49,27 +49,27 @@ main {
   flex: 1 1 6rem;
   gap: 0.25rem;
   padding: 1rem 0.5rem;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 0.75rem;
   text-align: center;
 }
 
 .wallet-stats strong {
-  color: #0f2547;
+  color: var(--navy-dark);
   font-size: 1.2rem;
 }
 
 .wallet-stats span {
-  color: #5a6676;
+  color: var(--text-muted-2);
   font-size: 0.8rem;
 }
 
 /* ===== Catálogo de canje ===== */
 .store-card {
-  max-width: 48rem;
+  max-width: var(--content-max);
   margin: 1.5rem auto;
-  border: 1px solid #e3e8f2;
-  border-radius: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
   overflow: hidden;
 }
 
@@ -80,8 +80,8 @@ main {
 
 .store-table caption {
   padding: 1rem;
-  background-color: #16386f;
-  color: #ffffff;
+  background-color: var(--navy);
+  color: var(--white);
 }
 
 .store-table caption strong {
@@ -91,17 +91,17 @@ main {
 
 .store-table thead th {
   padding: 0.75rem 0.5rem;
-  background-color: #e3e8f2;
-  color: #0f2547;
+  background-color: var(--surface-alt);
+  color: var(--navy-dark);
   font-size: 0.85rem;
 }
 
 .store-table tbody th,
 .store-table tbody td {
   padding: 0.75rem 0.5rem;
-  background-color: #ffffff;
-  border-top: 1px solid #e3e8f2;
-  color: #0f2547;
+  background-color: var(--white);
+  border-top: 1px solid var(--border);
+  color: var(--navy-dark);
   font-size: 0.85rem;
   text-align: center;
 }
@@ -112,71 +112,71 @@ main {
 }
 
 .tag-claimed {
-  color: #16386f;
+  color: var(--navy);
   font-weight: bold;
 }
 
 .locked th,
 .locked td {
-  background-color: #f4f6fa;
-  color: #5a6676;
+  background-color: var(--surface);
+  color: var(--text-muted-2);
 }
 
 /* ===== Botón de canje ===== */
 .btn-redeem {
   padding: 0.5em 0.9em;
-  background-color: #2463c7;
+  background-color: var(--blue);
   border: 1px solid transparent;
-  border-radius: 0.5rem;
-  color: #ffffff;
+  border-radius: var(--radius-btn);
+  color: var(--white);
   font-size: 0.85rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 .btn-redeem:hover {
-  background-color: #1d51a6;
+  background-color: var(--blue-dark);
 }
 
 .btn-redeem:focus-visible {
-  outline: 3px solid #0f2547;
+  outline: 3px solid var(--navy-dark);
   outline-offset: 1px;
 }
 
 /* ===== Explicación de las recompensas ===== */
 .store-help {
-  max-width: 48rem;
+  max-width: var(--content-max);
   margin: 1.5rem auto;
   padding: 1.5rem;
-  background-color: #f4f6fa;
-  border: 1px solid #e3e8f2;
-  border-radius: 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
 }
 
 .store-help h2 {
   margin-bottom: 1rem;
-  color: #0f2547;
+  color: var(--navy-dark);
   font-size: 1.2rem;
 }
 
 .store-help dt {
   margin-top: 1rem;
-  color: #0f2547;
+  color: var(--navy-dark);
   font-size: 0.95rem;
   font-weight: bold;
 }
 
 .store-help dd {
   margin-top: 0.25rem;
-  color: #52627d;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
 .store-note {
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid #e3e8f2;
-  color: #52627d;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 

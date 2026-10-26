@@ -1,14 +1,17 @@
 
+/* Alias locales de la lección apuntando a los tokens globales de
+   style.css. El borde se unifica a --border (antes #cdd9ee).
+   Los tonos sin token global (texto, tiles, error) quedan literales. */
 :root {
-  --lesson-bg: #ffffff;
+  --lesson-bg: var(--white);
   --text-main: #33415c;
   --text-muted: #66758a;
-  --blue-main: #2463c7;
-  --border-color: #cdd9ee;
+  --blue-main: var(--blue);
+  --border-color: var(--border);
   --tile-bg: #f0f4fb;
-  --tile-border: #cdd9ee;
+  --tile-border: var(--border);
   --success-bg: #e8f0fb;
-  --success-text: #2463c7;
+  --success-text: var(--blue);
   --error-bg: #ffdfe0;
   --error-text: #ea2b2b;
 }
@@ -219,7 +222,8 @@
   align-items: center;
   gap: 16px;
   text-align: center;
-  z-index: 100;
+  /* Solo necesita quedar por encima de .app-top (z-index: 1) */
+  z-index: 2;
 }
 
 /* :target muestra el panel al hacer clic en #feedback-exito o #feedback-error */

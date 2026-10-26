@@ -6,16 +6,16 @@ main {
 .recover-card {
   max-width: 26rem;
   margin: 2rem auto;
-  background-color: #f4f6fa;
-  border: 1px solid #e3e8f2;
-  border-radius: 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
   overflow: hidden;
 }
 
 /* ===== Banner institucional ===== */
 .recover-banner {
   padding: 1.5rem;
-  background-color: #2463c7;
+  background-color: var(--blue);
   text-align: center;
 }
 
@@ -26,7 +26,7 @@ main {
 
 .recover-banner .tagline {
   margin-top: 0.75rem;
-  color: #ffffff;
+  color: var(--white);
   font-size: 0.9rem;
   font-style: italic;
 }
@@ -38,14 +38,14 @@ main {
 
 .recover-body h1 {
   margin-bottom: 0.75rem;
-  color: #0f2547;
+  color: var(--navy-dark);
   font-size: 1.6rem;
   text-align: center;
 }
 
 .recover-intro {
   margin-bottom: 1.5rem;
-  color: #52627d;
+  color: var(--text-muted);
   font-size: 0.9rem;
   text-align: center;
 }
@@ -58,7 +58,7 @@ main {
 
 .recover-form label {
   margin-bottom: 0.35rem;
-  color: #0f2547;
+  color: var(--navy-dark);
   font-size: 0.85rem;
   font-weight: bold;
 }
@@ -66,29 +66,29 @@ main {
 .recover-form input {
   margin-bottom: 1rem;
   padding: 0.7em 0.8em;
-  background-color: #ffffff;
-  border: 1px solid #7a8ba7;
-  border-radius: 0.5rem;
-  color: #0f2547;
+  background-color: var(--white);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-btn);
+  color: var(--navy-dark);
   font-size: 1rem;
 }
 
 .recover-form ::placeholder {
-  color: #5a6676;
+  color: var(--text-muted-2);
 }
 
 .recover-form input:focus {
-  border-color: #2463c7;
-  outline: 1px solid #2463c7;
+  border-color: var(--blue);
+  outline: 1px solid var(--blue);
 }
 
 /* ===== Botón primario ===== */
 .btn-primary {
   margin-top: 0.5rem;
   padding: 0.85em 1em;
-  background-color: #2463c7;
-  border-radius: 0.5rem;
-  color: #ffffff;
+  background-color: var(--blue);
+  border-radius: var(--radius-btn);
+  color: var(--white);
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -96,24 +96,24 @@ main {
 }
 
 .btn-primary:hover {
-  background-color: #1d51a6;
+  background-color: var(--blue-dark);
 }
 
 .btn-primary:focus-visible {
-  outline: 3px solid #0f2547;
+  outline: 3px solid var(--navy-dark);
   outline-offset: 1px;
 }
 
 /* ===== Enlace de vuelta al login ===== */
 .recover-links {
   margin-top: 1rem;
-  color: #52627d;
+  color: var(--text-muted);
   font-size: 0.9rem;
   text-align: center;
 }
 
 .recover-links a {
-  color: #2463c7;
+  color: var(--blue);
 }
 
 /* =====================================================================
