@@ -6,8 +6,9 @@
     <title>Registro | LingoWeb</title>
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="registro.css" />
+    <script type="module" src="../../js/main.js"></script>
   </head>
-  <body>
+  <body data-page="registro">
     <!-- ===== Sección principal =====
          Sin menú de navegación: todavía no hay sesión iniciada. -->
     <main>
@@ -24,7 +25,7 @@
           <h1>Crear cuenta</h1>
 
           <!-- ======= Formulario de registro ======= -->
-          <form class="register-form" action="../login/login.html" method="get">
+          <form class="register-form" action="../login/login.html" method="get" novalidate>
             <label for="full-name">Nombre completo</label>
             <input
               id="full-name"
@@ -78,6 +79,9 @@
             />
 
             <button type="submit" class="btn-primary">Crear cuenta</button>
+
+            <!-- Resultado de la validación (lo completa js/view/registro.view.js) -->
+            <p id="register-message" class="form-message" role="status" aria-live="polite"></p>
           </form>
 
           <!-- ======= Vuelta al login ======= -->

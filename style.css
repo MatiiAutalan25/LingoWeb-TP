@@ -190,3 +190,42 @@
   outline: 3px solid var(--navy-dark);
   outline-offset: 1px;
 }
+
+/* ===== Mensajes de formulario (los completa JS) =====
+   El texto siempre explica el resultado; el color solo acompaña. */
+.form-message {
+  margin-top: 1rem;
+  padding: 0.75em 1em;
+  border: 1px solid transparent;
+  border-radius: var(--radius-btn);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.form-message:empty {
+  display: none;
+}
+
+.form-message.error {
+  background-color: #fdf2f2;
+  border-color: #b3261e;
+  color: #8c1d18;
+}
+
+.form-message.success {
+  background-color: #edf7ef;
+  border-color: #1e7b3c;
+  color: #155d2d;
+}
+
+/* Campo marcado como inválido por la validación */
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: #b3261e;
+  outline: 1px solid #b3261e;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

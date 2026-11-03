@@ -6,8 +6,9 @@
     <title>Inicio de sesión | LingoWeb</title>
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="login.css" />
+    <script type="module" src="../../js/main.js"></script>
   </head>
-  <body>
+  <body data-page="login">
     <!-- ===== Sección principal ===== -->
     <main>
       <section class="login-card">
@@ -27,6 +28,7 @@
             class="login-form"
             method="get"
             action="../dashboard/dashboard.html"
+            novalidate
           >
             <label for="user">Usuario / Email</label>
             <input
@@ -49,6 +51,9 @@
             />
 
             <button class="btn-primary" type="submit">Iniciar Sesión</button>
+
+            <!-- Resultado de la validación (lo completa js/view/login.view.js) -->
+            <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
           </form>
 
           <!-- ======= Enlaces de ayuda ======= -->

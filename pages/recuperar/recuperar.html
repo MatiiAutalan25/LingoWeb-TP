@@ -6,8 +6,9 @@
     <title>Recuperar contraseña | LingoWeb</title>
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="recuperar.css" />
+    <script type="module" src="../../js/main.js"></script>
   </head>
-  <body>
+  <body data-page="recuperar">
     <!-- ===== Sección principal =====
          Sin menú de navegación: todavía no hay sesión iniciada. -->
     <main>
@@ -27,7 +28,7 @@
 
           <!-- ======= Formulario de recupero ======= -->
           
-          <form class="recover-form" method="get" action="../login/login.html">
+          <form class="recover-form" method="get" action="../login/login.html" novalidate>
             <label for="email">Email</label>
             <input
               id="email"
@@ -39,6 +40,9 @@
             />
 
            <button type="submit" class="btn-primary">Recuperar contraseña</button>
+
+            <!-- Resultado del proceso simulado (lo completa js/view/recuperar.view.js) -->
+            <p id="recover-message" class="form-message" role="status" aria-live="polite"></p>
           </form>
 
           <!-- ======= Vuelta al login ======= -->
