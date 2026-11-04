@@ -225,6 +225,11 @@ select[aria-invalid="true"] {
   outline: 1px solid #b3261e;
 }
 
+/* Avatar del header con el marco canjeado en la tienda */
+.quick-stats a.marco-dorado {
+  box-shadow: 0 0 0 3px #d4a017;
+}
+
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;

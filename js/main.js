@@ -2,17 +2,25 @@
 // Punto de entrada. Cada página se identifica con <body data-page="...">
 // y carga este archivo con <script type="module">.
 // ===================================================================
-import { inicializarDatos, obtenerUsuarioActivo } from "./services/user.service.js";
-import { irA } from "./services/session.service.js";
+import { inicializarDatos, obtenerUsuarioActivo, actualizarUsuario } from "./services/user.service.js";
+import { cerrarSesion, irA } from "./services/session.service.js";
+import { verificarRacha } from "./services/racha.service.js";
+import { renderHeader } from "./view/header.view.js";
 import { initLogin } from "./view/login.view.js";
 import { initRegistro } from "./view/registro.view.js";
 import { initRecuperar } from "./view/recuperar.view.js";
+import { initPerfil } from "./view/perfil.view.js";
 
 // Páginas sin sesión (acceso)
 const vistasPublicas = {
   login: initLogin,
   registro: initRegistro,
   recuperar: initRecuperar,
+};
+
+// Páginas que requieren sesión. Los módulos de cursos pueden sumar las suyas acá.
+const vistasPrivadas = {
+  perfil: initPerfil,
 };
 
 inicializarDatos();
@@ -27,4 +35,15 @@ if (pagina in vistasPublicas) {
   } else {
     vistasPublicas[pagina]();
   }
+} else if (!usuario) {
+  // Página privada sin sesión válida: volver al acceso
+  cerrarSesion();
+  irA("login/login.html");
+} else {
+  // Si pasaron días sin práctica, se usan congeladores o se corta la racha
+  if (verificarRacha(usuario)) {
+    actualizarUsuario(usuario);
+  }
+  renderHeader(usuario);
+  vistasPrivadas[pagina]?.(usuario);
 }

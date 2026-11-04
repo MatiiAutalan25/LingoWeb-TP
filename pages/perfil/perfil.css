@@ -28,6 +28,11 @@
   text-align: center;
 }
 
+/* Marco canjeado en la tienda */
+.avatar.marco-dorado {
+  border-color: #d4a017;
+}
+
 .avatar {
   display: flex;
   align-items: center;
@@ -306,8 +311,12 @@
     flex: 1 1 16rem;
   }
 
-  .form-actions {
+  .form-actions,
+  .settings-form .form-message {
     flex: 1 1 100%;
+  }
+
+  .form-actions {
     flex-direction: row;
     justify-content: flex-end;
   }
