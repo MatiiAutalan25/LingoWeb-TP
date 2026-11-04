@@ -10,6 +10,7 @@ import { initLogin } from "./view/login.view.js";
 import { initRegistro } from "./view/registro.view.js";
 import { initRecuperar } from "./view/recuperar.view.js";
 import { initPerfil } from "./view/perfil.view.js";
+import { initRanking } from "./view/ranking.view.js";
 
 // Páginas sin sesión (acceso)
 const vistasPublicas = {
@@ -21,6 +22,7 @@ const vistasPublicas = {
 // Páginas que requieren sesión. Los módulos de cursos pueden sumar las suyas acá.
 const vistasPrivadas = {
   perfil: initPerfil,
+  ranking: initRanking,
 };
 
 inicializarDatos();

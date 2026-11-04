@@ -6,17 +6,19 @@
     <title>Ranking | LingoWeb</title>
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="ranking.css" />
+    <script type="module" src="../../js/main.js"></script>
   </head>
-  <body>
+  <body data-page="ranking">
     <div class="app-top">
       <header class="app-header">
         <a class="brand" href="../dashboard/dashboard.html">
           <span aria-hidden="true">L</span> LingoWeb
         </a>
+        <!-- Los valores los completa js/view/header.view.js -->
         <div class="quick-stats">
-          <span>🔥 5 días</span>
-          <span>⚡ 350 XP</span>
-          <a href="../perfil/perfil.html" aria-label="Mi perfil">JP</a>
+          <span id="header-racha">🔥 — días</span>
+          <span id="header-xp">⚡ — XP</span>
+          <a id="header-avatar" href="../perfil/perfil.html" aria-label="Mi perfil">—</a>
         </div>
       </header>
       <nav class="main-nav">
@@ -40,20 +42,22 @@
       <section class="league-picker">
         <label for="league">Liga actual</label>
         <select id="league" name="league">
-          <option selected>Liga de Bronce</option>
-          <option>Liga de Plata</option>
-          <option>Liga de Oro</option>
+          <option value="bronce" selected>Liga de Bronce</option>
+          <option value="plata">Liga de Plata</option>
+          <option value="oro">Liga de Oro</option>
         </select>
       </section>
 
-      <!-- ======= Tabla de clasificación ======= -->
-      <section class="ranking-card">
+      <!-- ======= Tabla de clasificación =======
+           Las filas se arman desde los datos (js/view/ranking.view.js) -->
+      <section class="ranking-card" aria-live="polite">
         <table class="ranking-table">
           <caption>
             <strong
-              ><span>🏆</span> Tabla de Clasificación · Liga de Bronce</strong
+              ><span aria-hidden="true">🏆</span> Tabla de Clasificación ·
+              <span id="ranking-league-name">Liga de Bronce</span></strong
             >
-            <span>Los 5 primeros ascienden a la Liga de Plata esta semana</span>
+            <span id="ranking-league-rule"></span>
           </caption>
 
           <thead>
@@ -65,119 +69,11 @@
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              <th scope="row"><span>🥇</span> 1</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">MZ</span>
-                  MarkZ_22
-                </div>
-              </td>
-              <td>420 XP</td>
-              <td>Zona de Ascenso</td>
-            </tr>
-            <tr class="current-user">
-              <th scope="row"><span>🥈</span> 2</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">JP</span>
-                  juanperez_web (Tú)
-                </div>
-              </td>
-              <td>350 XP</td>
-              <td>Zona de Ascenso</td>
-            </tr>
-            <tr>
-              <th scope="row"><span>🥉</span> 3</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">ED</span>
-                  Elon_Dev
-                </div>
-              </td>
-              <td>330 XP</td>
-              <td>Zona de Ascenso</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">SJ</span>
-                  SteveJ
-                </div>
-              </td>
-              <td>300 XP</td>
-              <td>Zona de Ascenso</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">JW</span>
-                  JWalke
-                </div>
-              </td>
-              <td>275 XP</td>
-              <td>Zona de Ascenso</td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">SI</span>
-                  SofIA
-                </div>
-              </td>
-              <td>240 XP</td>
-              <td>Se mantiene</td>
-            </tr>
-            <tr>
-              <th scope="row">7</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">MI</span>
-                  MarIA_26
-                </div>
-              </td>
-              <td>205 XP</td>
-              <td>Se mantiene</td>
-            </tr>
-            <tr>
-              <th scope="row">8</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">AL</span>
-                  Ada_Love
-                </div>
-              </td>
-              <td>180 XP</td>
-              <td>Se mantiene</td>
-            </tr>
-            <tr>
-              <th scope="row">9</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">BG</span>
-                  BillG
-                </div>
-              </td>
-              <td>120 XP</td>
-              <td>Zona de Descenso</td>
-            </tr>
-            <tr>
-              <th scope="row">10</th>
-              <td>
-                <div class="student">
-                  <span class="student-avatar">TB</span>
-                  TimBL
-                </div>
-              </td>
-              <td>95 XP</td>
-              <td>Zona de Descenso</td>
-            </tr>
-          </tbody>
+          <tbody id="ranking-body"></tbody>
         </table>
+
+        <!-- Estado vacío: se muestra si la liga no tiene participantes -->
+        <p id="ranking-empty" class="ranking-empty" hidden></p>
       </section>
     </main>
   </body>

@@ -78,6 +78,15 @@ main {
   color: var(--white);
 }
 
+/* Color del encabezado según la liga (bronce es el valor por defecto) */
+.ranking-table[data-liga="plata"] caption {
+  background-color: #8e9aa6;
+}
+
+.ranking-table[data-liga="oro"] caption {
+  background-color: #c9a227;
+}
+
 .ranking-table caption strong {
   display: block;
   font-size: 1.05rem;
@@ -134,6 +143,14 @@ main {
 .current-user td {
   background-color: #dbe6f8;
   font-weight: bold;
+}
+
+/* ===== Liga sin participantes ===== */
+.ranking-empty {
+  padding: 2rem 1rem;
+  background-color: var(--white);
+  color: var(--text-muted);
+  text-align: center;
 }
 
 /* 
